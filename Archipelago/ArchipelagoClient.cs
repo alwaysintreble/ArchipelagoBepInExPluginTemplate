@@ -35,6 +35,7 @@ public class ArchipelagoClient
         try
         {
             session = ArchipelagoSessionFactory.CreateSession(ServerData.Uri);
+            SetupSession();
         }
         catch (Exception e)
         {
@@ -93,7 +94,6 @@ public class ArchipelagoClient
         {
             var success = (LoginSuccessful)result;
 
-            SetupSession();
             ServerData.SetupSession(success.SlotData, session.RoomState.Seed);
             Authenticated = true;
 
