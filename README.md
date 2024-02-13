@@ -17,7 +17,9 @@ single archive to help with ease of installation.
 
 To rename the project, first open the solution in your IDE, then right click the solution, select edit solution,
 and rename the project name as well as the csproj's filename that the solution should be looking for.
-![img](docs/solution rename.png)
+
+![img](/docs/solution%20rename.png)
+
 Next, close your IDE, navigate to the folder containing the solution in your file browser, and rename the solution and
 project to your desired name. If present, delete /bin/ and /obj/. Open the solution in your IDE and confirm that
 everything loads. If it fails to load, confirm that the names your solution is looking for is correct and reload your IDE.
