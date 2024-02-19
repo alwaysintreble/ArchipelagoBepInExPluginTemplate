@@ -98,9 +98,11 @@ public class ArchipelagoClient
             Authenticated = true;
 
             DeathLinkHandler = new(session.CreateDeathLinkService(), ServerData.SlotName);
-
+#if NET35
+            session.Locations.CompleteLocationChecksAsync(null, ServerData.CheckedLocations.ToArray());
+#else
             session.Locations.CompleteLocationChecksAsync(ServerData.CheckedLocations.ToArray());
-
+#endif
             outText = $"Successfully connected to {ServerData.Uri} as {ServerData.SlotName}!";
 
             Plugin.BepinLogger.LogMessage(outText);
@@ -126,8 +128,11 @@ public class ArchipelagoClient
     private void Disconnect()
     {
         Plugin.BepinLogger.LogDebug("disconnecting from server...");
-
+#if NET35
+        session?.Socket.Disconnect();
+#else
         session?.Socket.DisconnectAsync();
+#endif
         session = null;
         Authenticated = false;
     }
