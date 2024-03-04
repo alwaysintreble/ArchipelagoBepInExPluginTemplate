@@ -36,8 +36,6 @@ public static class ArchipelagoConsole
     public static void LogMessage(string message)
     {
         if (message.IsNullOrWhiteSpace()) return;
-        
-        Plugin.BepinLogger.LogMessage(message);
 
         if (logLines.Count == MaxLogLines)
         {

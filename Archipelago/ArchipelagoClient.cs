@@ -14,8 +14,7 @@ namespace BepInEx5ArchipelagoPluginTemplate.Archipelago;
 public class ArchipelagoClient
 {
     public const string APVersion = "0.4.4";
-    private const string Game = "Archipelago";
-    private static readonly string[] Tags = ["AP", "TextOnly"];
+    private const string Game = "My Game";
 
     public static bool Authenticated;
     private bool attemptingConnection;
@@ -63,6 +62,7 @@ public class ArchipelagoClient
     {
         try
         {
+            // it's safe to thread this function call but unity notoriously hates threading so do not use excessively
             ThreadPool.QueueUserWorkItem(
                 _ => HandleConnectResult(
                     session.TryConnectAndLogin(
@@ -70,7 +70,6 @@ public class ArchipelagoClient
                         ServerData.SlotName,
                         ItemsHandlingFlags.NoItems, // TODO make sure to change this line
                         new Version(APVersion),
-                        Tags,
                         password: ServerData.Password,
                         requestSlotData: false // ServerData.NeedSlotData
                     )));
@@ -119,6 +118,7 @@ public class ArchipelagoClient
             Disconnect();
         }
 
+        ArchipelagoConsole.LogMessage(outText);
         attemptingConnection = false;
     }
 
@@ -177,7 +177,7 @@ public class ArchipelagoClient
     private void OnSessionErrorReceived(Exception e, string message)
     {
         Plugin.BepinLogger.LogError(e);
-        Plugin.BepinLogger.LogError(message);
+        ArchipelagoConsole.LogMessage(message);
     }
 
     /// <summary>

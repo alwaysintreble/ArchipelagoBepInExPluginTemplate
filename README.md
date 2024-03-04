@@ -8,24 +8,49 @@ It includes a small GUI to allow you to enter connection info and some building 
 ### Setting up BepInEx
 
 Follow the [normal steps for installing BepInEx](https://docs.bepinex.dev/v5.4.16/articles/user_guide/installation/index.html)
-for your game. I personally recommend using the
+for your game. I recommend using the
 [MonoMod HookGenPatcher](https://github.com/harbingerofme/Bepinex.Monomod.HookGenPatcher/releases) and using monomod
-hooks over Harmony Patching. With this patcher you can package BepInEx, the patcher, and your mod all together in a
-single archive to help with ease of installation.
+hooks over Harmony Patching, but this is up to personal preference
 
-### Renaming the Project
+### Installation
 
-To rename the project, first open the solution in your IDE, then right click the solution, select edit solution,
-and rename the project name as well as the csproj's filename that the solution should be looking for.
+You will need [.NET 6 or newer](https://dotnet.microsoft.com/download) to install and use the template.
 
-![img](/docs/solution%20rename.png)
+The template can be installed with the following command:
+```
+dotnet new install 
+```
 
-Next, close your IDE, navigate to the folder containing the solution in your file browser, and rename the solution and
-project to your desired name. If present, delete /bin/ and /obj/. Open the solution in your IDE and confirm that
-everything loads. If it fails to load, confirm that the names your solution is looking for is correct and reload your IDE.
+Then, to create a new project using the template, you can either select the template when creating a new project 
+from within your IDE, or
+```
+dotnet new apbepin -n MyPluginName
+```
 
-### Setting build paths
+Template options:
+```
+-T, --TargetFramework <TargetFramework>  The target framework for the project
+Required: *true*
+Type: text
+Default: net35
+-D, --Description <Description>          Plugin description
+Type: text
+Default: Example Archipelago Plugin
+-U, --UnityVersion <UnityVersion>        Unity version to use when developing the plugin
+Required: *true*
+Type: text
+Default: 5.6.0
+-V, --Version <Version>                  Plugin version
+Type: text
+Default: 1.0.0
+-G, --Game <Game>                        Name of the game this plugin is for
+Type: text
+Default: My Game
+-P, --Path <Path>                        File path to the game executable. Passing this will set up debug output to the plugins folder
+Type: text
+Default: C:\My Game
+```
 
-This template is already set up to strip unnecessary file packaging. There are also commands for the output paths where
-you would like to build, simply edit the csproj in your IDE and change the XML under the debug and release builds to
-your desired paths.
+To determine your unity version and which framework you should be targeting you can refer to
+https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/2_plugin_start.html.
+If you are targeting .net 3.5 you may need to modify a few methods as the `#if` don't work very well in templates.

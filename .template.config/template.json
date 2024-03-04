@@ -1,0 +1,58 @@
+﻿{
+  "author": "alwaysintreble",
+  "classifications": [ "Archipelago", "BepInEx", "BepInEx 5", "Plugin" ],
+  "name": "Archipelago BepinEx 5 Plugin",
+  "identity": "alwaysintreble.Archipelago.BepinEx",
+  "shortName": "apbepin",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "sourceName": "BepInEx5ArchipelagoPluginTemplate",
+  "symbols": {
+    "TargetFramework": {
+      "type": "parameter",
+      "description": "The target framework for the project",
+      "datatype": "text",
+      "defaultValue": "net35",
+      "replaces": "net35",
+      "isRequired": true
+    },
+    "Description": {
+      "type": "parameter",
+      "description": "Plugin description",
+      "datatype": "text",
+      "replaces": "{description}",
+      "defaultValue": "Example Archipelago Plugin"
+    },
+    "UnityVersion": {
+      "type": "parameter",
+      "description": "Unity version to use when developing the plugin",
+      "datatype": "text",
+      "replaces": "{UnityVersion}",
+      "defaultValue": "5.6.0",
+      "isRequired": true
+    },
+    "Version": {
+      "type": "parameter",
+      "description": "Plugin version",
+      "datatype": "text",
+      "replaces": "{version}",
+      "defaultValue": "1.0.0"
+    },
+    "Game": {
+      "type": "parameter",
+      "description": "Name of the game this plugin is for",
+      "datatype": "text",
+      "replaces": "My Game",
+      "defaultValue": "My Game"
+    },
+    "Path": {
+      "type": "parameter",
+      "description": "File path to the game executable. Passing this will set up debug output to the plugins folder",
+      "datatype": "text",
+      "replaces": "C:\\My Game"
+    }
+  }
+}
