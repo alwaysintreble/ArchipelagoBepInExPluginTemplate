@@ -18,7 +18,7 @@ You will need [.NET 6 or newer](https://dotnet.microsoft.com/download) to instal
 
 The template can be installed with the following command:
 ```
-dotnet new install 
+dotnet new install alwaysintreble.Archipelago.BepinEx
 ```
 
 Then, to create a new project using the template, you can either select the template when creating a new project 

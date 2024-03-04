@@ -10,6 +10,8 @@
   },
   "preferNameDirectory": true,
   "sourceName": "BepInEx5ArchipelagoPluginTemplate",
+  "projectURL": "https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate",
+  "repositoryURL": "https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate",
   "symbols": {
     "TargetFramework": {
       "type": "parameter",
@@ -30,7 +32,7 @@
       "type": "parameter",
       "description": "Unity version to use when developing the plugin",
       "datatype": "text",
-      "replaces": "{UnityVersion}",
+      "replaces": "5.6.0",
       "defaultValue": "5.6.0",
       "isRequired": true
     },
@@ -38,7 +40,7 @@
       "type": "parameter",
       "description": "Plugin version",
       "datatype": "text",
-      "replaces": "{version}",
+      "replaces": "1.0.0",
       "defaultValue": "1.0.0"
     },
     "Game": {
