@@ -24,29 +24,29 @@ dotnet new install alwaysintreble.Archipelago.BepinEx
 Then, to create a new project using the template, you can either select the template when creating a new project 
 from within your IDE, or
 ```
-dotnet new apbepin -n MyPluginName
+dotnet new apbepin -n <MyPluginName> -T <TFM> -U <UnityVersion>
 ```
 
 Template options:
 ```
--T, --TargetFramework <TargetFramework>  The target framework for the project
+-T, --TargetFramework <TargetFramework>  The target framework for the project. Supports net35, net40, net45, netstandard2.0, net6.0.
 Required: *true*
 Type: text
 Default: net35
--D, --Description <Description>          Plugin description
+-D, --Description <Description>          Plugin description.
 Type: text
 Default: Example Archipelago Plugin
--U, --UnityVersion <UnityVersion>        Unity version to use when developing the plugin
+-U, --UnityVersion <UnityVersion>        Unity version to use when developing the plugin.
 Required: *true*
 Type: text
 Default: 5.6.0
--V, --Version <Version>                  Plugin version
+-V, --Version <Version>                  Plugin version.
 Type: text
 Default: 1.0.0
--G, --Game <Game>                        Name of the game this plugin is for
+-G, --Game <Game>                        Name of the game this plugin is for.
 Type: text
 Default: My Game
--P, --Path <Path>                        File path to the game executable. Passing this will set up debug output to the plugins folder
+-P, --Path <Path>                        File path to the game executable. Passing this will set up debug output to the plugins folder.
 Type: text
 Default: C:\My Game
 ```

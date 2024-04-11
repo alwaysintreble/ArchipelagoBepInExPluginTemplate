@@ -7,23 +7,25 @@
         <Version>1.0.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
-<!-- you made need this for getting the multiclient dll to output for .net 6 and netstandard 2.0 -->
+<!-- you may need this for getting the multiclient dll to output for .net 6 and netstandard 2.0 -->
 <!--        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>-->
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0.2</PackageVersion>
+        <PackageVersion>1.0.3</PackageVersion>
         <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
         <Title>Archipelago BepinEx 5 Plugin</Title>
         <Authors>alwaysintreble</Authors>
         <Description>Template for creating a new BepinEx 5 plugin for use with Archipelago Multiworld</Description>
         <PackageTags>dotnet-new;templates</PackageTags>
-        <TargetFrameworks>net35;net46;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net35;net40;net45;netstandard2.0;net6.0</TargetFrameworks>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate</PackageProjectUrl>
