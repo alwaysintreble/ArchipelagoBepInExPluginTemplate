@@ -9,9 +9,9 @@
     "type": "project"
   },
   "preferNameDirectory": true,
-  "sourceName": "BepInEx5ArchipelagoPluginTemplate",
-  "projectURL": "https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate",
-  "repositoryURL": "https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate",
+  "sourceName": "ArchipelagoBepin5Template",
+  "projectURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
+  "repositoryURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
   "symbols": {
     "TargetFramework": {
       "type": "parameter",

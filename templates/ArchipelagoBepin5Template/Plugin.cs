@@ -25,7 +25,7 @@ public class Plugin : BaseUnityPlugin
         ArchipelagoClient = new ArchipelagoClient();
         ArchipelagoConsole.Awake();
 
-        BepinLogger.LogInfo($"{ModDisplayInfo} loaded!");
+        ArchipelagoConsole.LogMessage($"{ModDisplayInfo} loaded!");
     }
 
     private void OnGUI()

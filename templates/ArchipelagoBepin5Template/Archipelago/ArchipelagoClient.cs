@@ -49,7 +49,7 @@ public class ArchipelagoClient
     /// </summary>
     private void SetupSession()
     {
-        session.MessageLog.OnMessageReceived += OnMessageReceived;
+        session.MessageLog.OnMessageReceived += message => ArchipelagoConsole.LogMessage(message.ToString());
         session.Items.ItemReceived += OnItemReceived;
         session.Socket.ErrorReceived += OnSessionErrorReceived;
         session.Socket.SocketClosed += OnSessionSocketClosed;
@@ -104,7 +104,7 @@ public class ArchipelagoClient
 #endif
             outText = $"Successfully connected to {ServerData.Uri} as {ServerData.SlotName}!";
 
-            Plugin.BepinLogger.LogMessage(outText);
+            ArchipelagoConsole.LogMessage(outText);
         }
         else
         {
@@ -135,16 +135,6 @@ public class ArchipelagoClient
 #endif
         session = null;
         Authenticated = false;
-    }
-
-    /// <summary>
-    /// we received and need to handle a message from the server
-    /// </summary>
-    /// <param name="message">the received server message</param>
-    private void OnMessageReceived(LogMessage message)
-    {
-        Plugin.BepinLogger.LogMessage(message);
-        ArchipelagoConsole.LogMessage(message.ToString());
     }
 
     public void SendMessage(string message)

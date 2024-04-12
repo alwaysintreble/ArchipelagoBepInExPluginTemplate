@@ -24,7 +24,7 @@ dotnet new install alwaysintreble.Archipelago.BepinEx
 Then, to create a new project using the template, you can either select the template when creating a new project 
 from within your IDE, or
 ```
-dotnet new apbepin -n <MyPluginName> -T <TFM> -U <UnityVersion>
+dotnet new apbepin5 -n <MyPluginName> -T <TFM> -U <UnityVersion>
 ```
 
 Template options:
