@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageVersion>1.1.1</PackageVersion>
+        <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
+        <Title>Archipelago BepinEx 5 Plugin</Title>
+        <Authors>alwaysintreble</Authors>
+        <Description>Template for creating a new BepinEx 5 plugin for use with Archipelago Multiworld</Description>
+        <PackageTags>dotnet-new;templates</PackageTags>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate</PackageProjectUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="LICENSE.txt" Pack="true" PackagePath=""/>
+        <Content Include="README.md" Pack="true" PackagePath=""/>
+        <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+
+</Project>
