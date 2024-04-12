@@ -1,4 +1,4 @@
-﻿## Archipelago Plugin Template for BepInEx 5
+## Archipelago Plugin Template for BepInEx 5
 
 This is a plugin template for starting to make an Archipelago plugin using BepInEx 5 with the very basics already set up.
 It includes a small GUI to allow you to enter connection info and some building configuration already done.

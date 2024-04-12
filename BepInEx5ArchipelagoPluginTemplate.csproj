@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net35</TargetFramework>
+        <TargetFrameworks>net35;net40;net45;netstandard2.0;net6.0</TargetFrameworks>
         <AssemblyName>BepInEx5ArchipelagoPluginTemplate</AssemblyName>
         <Description>{description}</Description>
         <Version>1.0.0</Version>
@@ -15,7 +15,7 @@
     
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.1.0</PackageVersion>
         <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
         <Title>Archipelago BepinEx 5 Plugin</Title>
         <Authors>alwaysintreble</Authors>
@@ -71,6 +71,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include=".template.config\template.json" />
+        <Content Include=".template.config\template.json" />
+        <Content Include="Plugin.cs"/>
+        <Content Include="Archipelago\ArchipelagoClient.cs"/>
+        <Content Include="Archipelago\ArchipelagoData.cs"/>
+        <Content Include="Archipelago\DeathLinkHandler.cs"/>
+        <Content Include="Utils\ArchipelagoConsole.cs"/>
     </ItemGroup>
 </Project>
