@@ -13,7 +13,7 @@ namespace BepInEx5ArchipelagoPluginTemplate.Archipelago;
 
 public class ArchipelagoClient
 {
-    public const string APVersion = "0.4.4";
+    public const string APVersion = "0.5.0";
     private const string Game = "My Game";
 
     public static bool Authenticated;
@@ -123,7 +123,7 @@ public class ArchipelagoClient
     }
 
     /// <summary>
-    /// something we wrong or we need to properly disconnect from the server. cleanup and re null our session
+    /// something went wrong, or we need to properly disconnect from the server. cleanup and re null our session
     /// </summary>
     private void Disconnect()
     {
@@ -150,13 +150,13 @@ public class ArchipelagoClient
     {
         var receivedItem = helper.DequeueItem();
 
-        if (helper.Index < ServerData.Index) return;
+        if (helper.Index <= ServerData.Index) return;
 
         ServerData.Index++;
 
         // TODO reward the item here
         // if items can be received while in an invalid state for actually handling them, they can be placed in a local
-        // queue to be handled later
+        // queue/collection to be handled later
     }
 
     /// <summary>
