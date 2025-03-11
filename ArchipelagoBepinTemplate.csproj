@@ -16,6 +16,8 @@
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate</PackageProjectUrl>
+        <PackageOutputPath>$(SolutionDir)nuget</PackageOutputPath>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
