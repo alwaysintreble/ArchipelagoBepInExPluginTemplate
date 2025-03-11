@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.1.2</PackageVersion>
+        <PackageVersion>1.1.3</PackageVersion>
         <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
         <Title>Archipelago BepinEx 5 Plugin</Title>
         <Authors>alwaysintreble</Authors>
