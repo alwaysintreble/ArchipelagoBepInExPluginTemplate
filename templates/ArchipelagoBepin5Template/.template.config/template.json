@@ -13,13 +13,28 @@
   "projectURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
   "repositoryURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
   "symbols": {
-    "TargetFramework": {
+    "Target Framework": {
       "type": "parameter",
       "description": "The target framework for the project",
       "datatype": "text",
-      "defaultValue": "net35",
       "replaces": "net35",
-      "isRequired": false
+      "defaultValue": "net35",
+      "isRequired": true,
+    },
+    "Unity Version": {
+      "type": "parameter",
+      "description": "Unity version to use when developing the plugin",
+      "datatype": "text",
+      "replaces": "5.6.0",
+      "defaultValue": "Example Archipelago Plugin",
+      "isRequired": true,
+    },
+    "Project Name": {
+      "type": "parameter",
+      "description": "Name of the Project",
+      "datatype": "text",
+      "replaces": "BepInEx5ArchipelagoPluginTemplate",
+      "isRequired": true
     },
     "Description": {
       "type": "parameter",
@@ -28,20 +43,12 @@
       "replaces": "{description}",
       "defaultValue": "Example Archipelago Plugin"
     },
-    "UnityVersion": {
-      "type": "parameter",
-      "description": "Unity version to use when developing the plugin",
-      "datatype": "text",
-      "replaces": "5.6.0",
-      "defaultValue": "5.6.0",
-      "isRequired": true
-    },
     "Version": {
       "type": "parameter",
       "description": "Plugin version",
       "datatype": "text",
       "replaces": "1.0.0",
-      "defaultValue": "1.0.0"
+      "defaultValue": "1.0.0",
     },
     "Game": {
       "type": "parameter",
