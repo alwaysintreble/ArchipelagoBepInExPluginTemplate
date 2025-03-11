@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using BepInEx;
 
-namespace BepInEx5ArchipelagoPluginTemplate.templates.Archipelago;
+namespace BepInEx5ArchipelagoPluginTemplate.Archipelago;
 
 public class DeathLinkHandler
 {

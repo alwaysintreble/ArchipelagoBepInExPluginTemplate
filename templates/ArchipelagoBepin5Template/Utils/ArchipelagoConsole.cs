@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BepInEx;
-using BepInEx5ArchipelagoPluginTemplate.templates.Archipelago;
+using BepInEx5ArchipelagoPluginTemplate.Archipelago;
 using UnityEngine;
 
-namespace BepInEx5ArchipelagoPluginTemplate.templates.Utils;
+namespace BepInEx5ArchipelagoPluginTemplate.Utils;
 
 // shamelessly stolen from oc2-modding https://github.com/toasterparty/oc2-modding/blob/main/OC2Modding/GameLog.cs
 public static class ArchipelagoConsole

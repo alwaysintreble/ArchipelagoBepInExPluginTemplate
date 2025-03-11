@@ -7,9 +7,9 @@ using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Helpers;
 using Archipelago.MultiClient.Net.MessageLog.Messages;
 using Archipelago.MultiClient.Net.Packets;
-using BepInEx5ArchipelagoPluginTemplate.templates.Utils;
+using BepInEx5ArchipelagoPluginTemplate.Utils;
 
-namespace BepInEx5ArchipelagoPluginTemplate.templates.Archipelago;
+namespace BepInEx5ArchipelagoPluginTemplate.Archipelago;
 
 public class ArchipelagoClient
 {

@@ -1,17 +1,17 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using BepInEx5ArchipelagoPluginTemplate.templates.Archipelago;
-using BepInEx5ArchipelagoPluginTemplate.templates.Utils;
+using BepInEx5ArchipelagoPluginTemplate.Archipelago;
+using BepInEx5ArchipelagoPluginTemplate.Utils;
 using UnityEngine;
 
-namespace BepInEx5ArchipelagoPluginTemplate.templates;
+namespace BepInEx5ArchipelagoPluginTemplate;
 
 [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
 public class Plugin : BaseUnityPlugin
 {
     public const string PluginGUID = "com.yourName.projectName";
-    public const string PluginName = "projectName";
-    public const string PluginVersion = "0.1.0";
+    public const string PluginName = "BepInEx5ArchipelagoPluginTemplate";
+    public const string PluginVersion = "1.0.0";
 
     public const string ModDisplayInfo = $"{PluginName} v{PluginVersion}";
     private const string APDisplayInfo = $"Archipelago v{ArchipelagoClient.APVersion}";

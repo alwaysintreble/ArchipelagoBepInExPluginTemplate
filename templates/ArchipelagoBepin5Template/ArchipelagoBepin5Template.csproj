@@ -11,6 +11,7 @@
         <!--        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>-->
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <RootNamespace>BepInEx5ArchipelagoPluginTemplate</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -24,13 +25,13 @@
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <DebugType>none</DebugType>
         <Optimize>true</Optimize>
-        <OutputPath>bin\Release\$(TargetFramework)</OutputPath>
+        <OutputPath>bin\Release\$(AssemblyName)</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
     </PropertyGroup>
 
     <Target Name="ZipMod" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <ZipDirectory SourceDirectory="bin\Release\$(TargetFramework)"
+        <ZipDirectory SourceDirectory="bin\Release\$(AssemblyName)"
                       DestinationFile="bin\Release\$(AssemblyName)-$(Version).zip"
                       Overwrite="true"/>
     </Target>

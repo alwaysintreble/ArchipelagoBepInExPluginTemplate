@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace BepInEx5ArchipelagoPluginTemplate.templates.Archipelago;
+namespace BepInEx5ArchipelagoPluginTemplate.Archipelago;
 
 public class ArchipelagoData
 {
