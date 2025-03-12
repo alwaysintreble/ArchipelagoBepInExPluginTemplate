@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepin6Template.N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepin6Template.NET.Framework", "templates\ArchipelagoBepin6Template.NET.Framework\ArchipelagoBepin6Template.NET.Framework.csproj", "{5762A72F-56A6-45C9-8062-F8B632243661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepin6Template.Unity.IL2Cpp", "templates\ArchipelagoBepin6Template.Unity.IL2Cpp\ArchipelagoBepin6Template.Unity.IL2Cpp.csproj", "{8F956234-F988-44FE-8CBB-DB7BA52CBC6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{5762A72F-56A6-45C9-8062-F8B632243661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5762A72F-56A6-45C9-8062-F8B632243661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5762A72F-56A6-45C9-8062-F8B632243661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F956234-F988-44FE-8CBB-DB7BA52CBC6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F956234-F988-44FE-8CBB-DB7BA52CBC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F956234-F988-44FE-8CBB-DB7BA52CBC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F956234-F988-44FE-8CBB-DB7BA52CBC6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -29,7 +29,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="templates\ArchipelagoBepin6Template.Unity.IL2Cpp\" />
       <Folder Include="templates\ArchipelagoBepin6Template.Unity.Mono\" />
     </ItemGroup>
 
