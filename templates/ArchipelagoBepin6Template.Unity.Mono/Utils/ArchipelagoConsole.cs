@@ -42,7 +42,7 @@ public static class ArchipelagoConsole
             logLines.RemoveAt(0);
         }
         logLines.Add(message);
-        Plugin.BepinLogger.LogMessage(message);
+        Plugin.Logger.LogMessage(message);
         lastUpdateTime = Time.time;
         UpdateWindow();
     }

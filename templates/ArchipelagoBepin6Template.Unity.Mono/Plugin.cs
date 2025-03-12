@@ -16,13 +16,13 @@ public class Plugin : BaseUnityPlugin
 
     public const string ModDisplayInfo = $"{PluginName} v{PluginVersion}";
     private const string APDisplayInfo = $"Archipelago v{ArchipelagoClient.APVersion}";
-    public static ManualLogSource BepinLogger;
+    public new static ManualLogSource Logger;
     public static ArchipelagoClient ArchipelagoClient;
 
-    public override void Load()
+    private void Awake()
     {
         // Plugin startup logic
-        BepinLogger = Logger;
+        Logger = base.Logger;
         ArchipelagoClient = new ArchipelagoClient();
         ArchipelagoConsole.Awake();
 

@@ -37,7 +37,7 @@ public class ArchipelagoClient
         }
         catch (Exception e)
         {
-            Plugin.BepinLogger.LogError(e);
+            Plugin.Logger.LogError(e);
         }
 
         TryConnect();
@@ -75,7 +75,7 @@ public class ArchipelagoClient
         }
         catch (Exception e)
         {
-            Plugin.BepinLogger.LogError(e);
+            Plugin.Logger.LogError(e);
             HandleConnectResult(new LoginFailure(e.ToString()));
             attemptingConnection = false;
         }
@@ -96,7 +96,11 @@ public class ArchipelagoClient
             Authenticated = true;
 
             DeathLinkHandler = new(session.CreateDeathLinkService(), ServerData.SlotName);
+#if NET35
+            session.Locations.CompleteLocationChecksAsync(null, ServerData.CheckedLocations.ToArray());
+#else
             session.Locations.CompleteLocationChecksAsync(ServerData.CheckedLocations.ToArray());
+#endif
             outText = $"Successfully connected to {ServerData.Uri} as {ServerData.SlotName}!";
 
             ArchipelagoConsole.LogMessage(outText);
@@ -107,7 +111,7 @@ public class ArchipelagoClient
             outText = $"Failed to connect to {ServerData.Uri} as {ServerData.SlotName}.";
             outText = failure.Errors.Aggregate(outText, (current, error) => current + $"\n    {error}");
 
-            Plugin.BepinLogger.LogError(outText);
+            Plugin.Logger.LogError(outText);
 
             Authenticated = false;
             Disconnect();
@@ -122,8 +126,12 @@ public class ArchipelagoClient
     /// </summary>
     private void Disconnect()
     {
-        Plugin.BepinLogger.LogDebug("disconnecting from server...");
+        Plugin.Logger.LogDebug("disconnecting from server...");
+#if NET35
+        session?.Socket.Disconnect();
+#else
         session?.Socket.DisconnectAsync();
+#endif
         session = null;
         Authenticated = false;
     }
@@ -157,7 +165,7 @@ public class ArchipelagoClient
     /// <param name="message">message received from the server</param>
     private void OnSessionErrorReceived(Exception e, string message)
     {
-        Plugin.BepinLogger.LogError(e);
+        Plugin.Logger.LogError(e);
         ArchipelagoConsole.LogMessage(message);
     }
 
@@ -167,7 +175,7 @@ public class ArchipelagoClient
     /// <param name="reason"></param>
     private void OnSessionSocketClosed(string reason)
     {
-        Plugin.BepinLogger.LogError($"Connection to Archipelago lost: {reason}");
+        Plugin.Logger.LogError($"Connection to Archipelago lost: {reason}");
         Disconnect();
     }
 }
