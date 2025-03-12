@@ -4,9 +4,9 @@
         <PackageType>Template</PackageType>
         <PackageVersion>1.1.4</PackageVersion>
         <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
-        <Title>Archipelago BepinEx 5 Plugin</Title>
+        <Title>Archipelago BepinEx Plugin Templates</Title>
         <Authors>alwaysintreble</Authors>
-        <Description>Template for creating a new BepinEx 5 plugin for use with Archipelago Multiworld</Description>
+        <Description>Template for creating a new BepInEx 5 and BepInEx 6 plugin for use with Archipelago Multiworld</Description>
         <PackageTags>dotnet-new;templates</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
         <IncludeContentInPack>true</IncludeContentInPack>
@@ -15,7 +15,7 @@
         <NoWarn>$(NoWarn);NU5128</NoWarn>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageProjectUrl>https://github.com/alwaysintreble/BepInEx5ArchipelagoPluginTemplate</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate</PackageProjectUrl>
         <PackageOutputPath>$(SolutionDir)nuget</PackageOutputPath>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
