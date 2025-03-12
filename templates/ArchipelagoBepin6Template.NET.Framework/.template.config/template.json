@@ -17,23 +17,22 @@
       "type": "parameter",
       "description": "The target framework for the project",
       "datatype": "text",
-      "replaces": "net35",
-      "defaultValue": "net35",
-      "isRequired": true
+      "replaces": "net40",
+      "defaultValue": "net40"
     },
     "UnityVersion": {
       "type": "parameter",
       "description": "Unity version to use when developing the plugin",
       "datatype": "text",
       "replaces": "5.6.0",
-      "defaultValue": "Example Archipelago Plugin",
+      "defaultValue": "5.6.0",
       "isRequired": true
     },
     "ProjectName": {
       "type": "parameter",
       "description": "Name of the project",
       "datatype": "text",
-      "replaces": "BepInEx5ArchipelagoPluginTemplate",
+      "replaces": "ArchipelagoBepin6Template.NET.Framework",
       "isRequired": true
     },
     "Description": {

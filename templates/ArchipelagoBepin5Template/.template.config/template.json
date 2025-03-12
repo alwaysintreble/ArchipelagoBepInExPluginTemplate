@@ -26,7 +26,7 @@
       "description": "Unity version to use when developing the plugin",
       "datatype": "text",
       "replaces": "5.6.0",
-      "defaultValue": "Example Archipelago Plugin",
+      "defaultValue": "5.6.0",
       "isRequired": true
     },
     "ProjectName": {
