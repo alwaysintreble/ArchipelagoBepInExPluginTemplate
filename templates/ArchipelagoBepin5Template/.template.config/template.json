@@ -19,7 +19,7 @@
       "datatype": "text",
       "replaces": "net35",
       "defaultValue": "net35",
-      "isRequired": true,
+      "isRequired": true
     },
     "UnityVersion": {
       "type": "parameter",
@@ -27,14 +27,14 @@
       "datatype": "text",
       "replaces": "5.6.0",
       "defaultValue": "Example Archipelago Plugin",
-      "isRequired": true,
+      "isRequired": true
     },
     "ProjectName": {
       "type": "parameter",
       "description": "Name of the project",
       "datatype": "text",
       "replaces": "BepInEx5ArchipelagoPluginTemplate",
-      "isRequired": true,
+      "isRequired": true
     },
     "Description": {
       "type": "parameter",
@@ -48,7 +48,7 @@
       "description": "Plugin version",
       "datatype": "text",
       "replaces": "1.0.0",
-      "defaultValue": "1.0.0",
+      "defaultValue": "1.0.0"
     },
     "Game": {
       "type": "parameter",
@@ -62,6 +62,35 @@
       "description": "File path to the game executable. Passing this will set up debug output to the plugins folder",
       "datatype": "text",
       "replaces": "C:\\My Game"
+    },
+    "ItemsHandlingFlags": {
+      "type": "parameter",
+      "description": "Whether and which item packets this client should receive from the server. For more info see https://archipelagomw.github.io/Archipelago.MultiClient.Net/api/Archipelago.MultiClient.Net.Enums.ItemsHandlingFlags.html",
+      "datatype": "choice",
+      "replaces": "NoItems",
+      "default": "AllItems",
+      "choices": [
+        {
+          "choice": "NoItems",
+          "description": "Don't get any ReceivedItems packets from the server."
+        },
+        {
+          "choice": "RemoteItems",
+          "description": "Get ReceivedItems packets for items being granted to you by others."
+        },
+        {
+          "choice": "IncludeOwnItems",
+          "description": "Get ReceivedItems packets for items which you picked up in your own world. Automatically includes RemoteItems option as it is required to set this."
+        },
+        {
+          "choice": "IncludeStartingInventory",
+          "description": "Get ReceivedItems packets for your starting inventory. Automatically includes RemoteItems option as it is required to set this."
+        },
+        {
+          "choice": "AllItems",
+          "description": "Get ReceivedItems packets for all remote items, items in your world, and starting inventory granted to you."
+        }
+      ]
     }
   }
 }

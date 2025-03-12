@@ -68,10 +68,10 @@ public class ArchipelagoClient
                     session.TryConnectAndLogin(
                         Game,
                         ServerData.SlotName,
-                        ItemsHandlingFlags.NoItems, // TODO make sure to change this line
+                        ItemsHandlingFlags.NoItems,
                         new Version(APVersion),
                         password: ServerData.Password,
-                        requestSlotData: false // ServerData.NeedSlotData
+                        requestSlotData: ServerData.NeedSlotData
                     )));
         }
         catch (Exception e)
