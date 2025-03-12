@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.1.4</PackageVersion>
+        <PackageVersion>1.2.0</PackageVersion>
         <PackageId>alwaysintreble.Archipelago.BepinEx</PackageId>
         <Title>Archipelago BepinEx Plugin Templates</Title>
         <Authors>alwaysintreble</Authors>
@@ -21,10 +21,17 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="templates\ArchipelagoBepin6Template.Net.CoreCLR\Utils\PluginInfo.cs" />
         <Content Include="LICENSE.txt" Pack="true" PackagePath=""/>
         <Content Include="README.md" Pack="true" PackagePath=""/>
         <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
         <Compile Remove="**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="templates\ArchipelagoBepin6Template.NET.Framework\" />
+      <Folder Include="templates\ArchipelagoBepin6Template.Unity.IL2Cpp\" />
+      <Folder Include="templates\ArchipelagoBepin6Template.Unity.Mono\" />
     </ItemGroup>
 
 </Project>

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepinTemplate", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepin5Template", "templates\ArchipelagoBepin5Template\ArchipelagoBepin5Template.csproj", "{88490AA6-632D-43B3-9F3E-E6A8C07AE95D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchipelagoBepin6Template.Net.CoreCLR", "templates\ArchipelagoBepin6Template.Net.CoreCLR\ArchipelagoBepin6Template.Net.CoreCLR.csproj", "{ACE55230-B83E-4F9D-B189-5D9EB4AB68DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{88490AA6-632D-43B3-9F3E-E6A8C07AE95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88490AA6-632D-43B3-9F3E-E6A8C07AE95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88490AA6-632D-43B3-9F3E-E6A8C07AE95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE55230-B83E-4F9D-B189-5D9EB4AB68DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE55230-B83E-4F9D-B189-5D9EB4AB68DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE55230-B83E-4F9D-B189-5D9EB4AB68DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE55230-B83E-4F9D-B189-5D9EB4AB68DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
