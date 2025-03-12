@@ -28,8 +28,4 @@
         <Compile Remove="**\*" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="templates\ArchipelagoBepin6Template.Unity.Mono\" />
-    </ItemGroup>
-
 </Project>
