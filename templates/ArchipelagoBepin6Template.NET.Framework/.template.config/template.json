@@ -9,7 +9,7 @@
     "type": "project"
   },
   "preferNameDirectory": true,
-  "sourceName": "ArchipelagoBepin6Template.Net.CoreCLR",
+  "sourceName": "ArchipelagoBepInExPluginTemplate",
   "projectURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
   "repositoryURL": "https://github.com/alwaysintreble/ArchipelagoBepInExPluginTemplate",
   "symbols": {
